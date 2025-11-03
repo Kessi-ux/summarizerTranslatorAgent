@@ -29,8 +29,8 @@ export const mastra = new Mastra({
   },
   bundler: {
     externals: [
-      "axios", 
-      "@google/genai"
+      "@google/genai",
+      "axios"
     ],
    },
 });
