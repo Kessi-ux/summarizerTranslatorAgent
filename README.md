@@ -1,6 +1,6 @@
-# Mastra AI Summarizer & Translator
+# SUMMARY
 
-This is a **Mastra-based AI application** that uses **Google Gemini Flash** to **summarize** and **translate text** efficiently.  
+Summary is a **Mastra-based AI application** that uses **Google Gemini Flash** to **summarize** and **translate text** efficiently.  
 The app is built using the **Mastra framework** and deployed to **Mastra Cloud**, making it accessible via a public **A2A (Agent-to-Agent)** endpoint.
 
 ---
