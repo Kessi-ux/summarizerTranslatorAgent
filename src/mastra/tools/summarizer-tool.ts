@@ -76,7 +76,7 @@ async function translateText(text: string, targetLang: string) {
       { headers: { "Content-Type": "application/json" } }
     );
 
-    return response.data?.translatedText || "Translation unavailable.";
+    return response.data?.translatedText;
   } catch (error: any) {
     console.error("Translation error:", error.message || error);
     return "An error occurred while translating the text.";

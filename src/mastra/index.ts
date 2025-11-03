@@ -6,9 +6,10 @@ import { weatherWorkflow } from './workflows/weather-workflow';
 import { weatherAgent } from './agents/weather-agent';
 import { toolCallAppropriatenessScorer, completenessScorer, translationScorer } from './scorers/weather-scorer';
 import { summarizerAgent } from './agents/summarizerAgent';
+import { summarizerWorkflow } from './workflows/summarizer-workflow';
 
 export const mastra = new Mastra({
-  workflows: { weatherWorkflow },
+  workflows: { weatherWorkflow, summarizerWorkflow },
   agents: { weatherAgent, summarizerAgent },
   scorers: { toolCallAppropriatenessScorer, completenessScorer, translationScorer },
   storage: new LibSQLStore({
