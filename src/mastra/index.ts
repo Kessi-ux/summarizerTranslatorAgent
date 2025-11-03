@@ -28,6 +28,6 @@ export const mastra = new Mastra({
     default: { enabled: true }, 
   },
   bundler: {
-    externals: ["axios"],
+    externals: ["axios", "@google/genai"],
    },
 });
