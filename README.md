@@ -68,3 +68,5 @@ Once running, visit:
  Playground: http://localhost:4112/
 │ API:        http://localhost:4112/api
 ```
+# Read the article to learn more
+[https://kesandu.medium.com/building-my-first-ai-agent-from-idea-to-mastra-cloud-deployment-9fb6aa9dc249]
