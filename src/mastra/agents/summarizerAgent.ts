@@ -70,15 +70,6 @@ export const summarizerAgent = new Agent({
     translate: translatorTool,
   },
 
-    // summarize: async (input: { text: string; language?: string }) => {
-    //   const summary = await geminiSummarize(input.text);
-    //   if (input.language) {
-    //     const translated = await translateText(summary, input.language);
-    //     return { summary, translated };
-    //   }
-    //   return { summary };
-    // },
-
   memory: new Memory({
     storage: new LibSQLStore({
       url: 'file:../mastra.db',

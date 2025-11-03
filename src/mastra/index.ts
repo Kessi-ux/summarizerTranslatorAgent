@@ -7,6 +7,7 @@ import { weatherAgent } from './agents/weather-agent';
 import { toolCallAppropriatenessScorer, completenessScorer, translationScorer } from './scorers/weather-scorer';
 import { summarizerAgent } from './agents/summarizerAgent';
 import { summarizerWorkflow } from './workflows/summarizer-workflow';
+import { a2aAgentRoute } from './routes/a2a-agent-route';
 
 export const mastra = new Mastra({
   workflows: { weatherWorkflow, summarizerWorkflow },
@@ -34,4 +35,12 @@ export const mastra = new Mastra({
       "axios"
     ],
    },
+   server: {
+    build: {
+      openAPIDocs: true,
+      swaggerUI: true,
+    },
+    apiRoutes: [a2aAgentRoute],
+  },
 });
+
