@@ -8,10 +8,14 @@ import { toolCallAppropriatenessScorer, completenessScorer, translationScorer } 
 import { summarizerAgent } from './agents/summarizerAgent';
 import { summarizerWorkflow } from './workflows/summarizer-workflow';
 import { a2aAgentRoute } from './routes/a2a-agent-route';
+import { webSummarizerAgent } from './agents/webSummarizerAgent';
+import { webSummarizerWorkflow } from './workflows/webSummarizer-workflow';
+import { a2aWebAgentRoute } from './routes/a2a-webagent-route';
+
 
 export const mastra = new Mastra({
-  workflows: { weatherWorkflow, summarizerWorkflow },
-  agents: { weatherAgent, summarizerAgent },
+  workflows: { weatherWorkflow, summarizerWorkflow, webSummarizerWorkflow},
+  agents: { weatherAgent, summarizerAgent, webSummarizerAgent},
   scorers: { toolCallAppropriatenessScorer, completenessScorer, translationScorer },
   storage: new LibSQLStore({
     // stores observability, scores, ... into memory storage, if it needs to persist, change to file:../mastra.db
@@ -40,7 +44,7 @@ export const mastra = new Mastra({
       openAPIDocs: true,
       swaggerUI: true,
     },
-    apiRoutes: [a2aAgentRoute],
+    apiRoutes: [a2aAgentRoute, a2aWebAgentRoute],
   },
 });
 
